@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <h1>Tic Tac Toe</h1>
+
+      <!-- Scoreboard -->
+      <div class="scoreboard">
+        <div>
+          <label>Player X Score: <span id="scoreX">0</span></label>
+        </div>
+        <div>
+          <label>Player O Score: <span id="scoreO">0</span></label>
+        </div>
+      </div>
+
+      <!-- Game board -->
+      <div class="board">
+        <div class="cell" data-index="0"></div>
+        <div class="cell" data-index="1"></div>
+        <div class="cell" data-index="2"></div>
+        <div class="cell" data-index="3"></div>
+        <div class="cell" data-index="4"></div>
+        <div class="cell" data-index="5"></div>
+        <div class="cell" data-index="6"></div>
+        <div class="cell" data-index="7"></div>
+        <div class="cell" data-index="8"></div>
+      </div>
+
+      <!-- Game message -->
+      <div id="message" class="message"></div>
+
+      <!-- Timer -->
+      <div id="timer" class="timer">Time: 00:00</div>
+
+      <!-- Settings -->
+      <div class="settings">
+        <label for="playerX">Symbol for Player X:</label>
+        <input type="text" id="playerX" value="X" maxlength="1" />
+
+        <label for="colorX">Color for Player X:</label>
+        <input type="color" id="colorX" value="#0000FF" />
+
+        <label for="playerO">Symbol for Player O:</label>
+        <input type="text" id="playerO" value="O" maxlength="1" />
+
+        <label for="colorO">Color for Player O:</label>
+        <input type="color" id="colorO" value="#FF0000" />
+      </div>
+
+      <!-- Game mode and AI level -->
+      <div class="controls">
+        <label for="gameMode">Game Mode:</label>
+        <select id="gameMode">
+          <option value="pvp">Player vs Player</option>
+          <option value="pve">Player vs AI</option>
+        </select>
+
+        <label for="aiLevel">AI Difficulty:</label>
+        <select id="aiLevel">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+
+      <!-- Reset button -->
+      <button id="resetButton">Reset Game</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
